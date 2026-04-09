@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Soundouts</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicon Einbindung -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Soundouts" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="centered headerContent">
+            <a href="#top"><img src="img-vid/logo/Logo.png" alt="The Soundouts Logo"></a>
+            <div class="headerNavBtnContainer">
+                <a href="#events"><button>Events & Termine</button></a>
+                <a href="#gallery"><button>Bilder & Videos</button></a>
+                <a href="#contact"><button>Kontaktformular</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Logo -->
+        <div class="centered logoContainer">
+            <img src="img-vid/logo/Logo.png" alt="The Soundouts Logo">
+        </div>
+
+        <!-- Hero-Section -->
+        <div class="centered hero-video-container">
+            <video id="heroVideo" muted autoplay loop>
+                <source src="img-vid/hero/Video_Platzhalter.mp4" type="video/mp4">
+            </video>
+            <button id="muteBtn" class="mute-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <path d="M32.0833 14.5833L17.5 26.25H5.83331V43.75H17.5L32.0833 55.4166V14.5833Z" stroke="#3F1414"
+                        stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M67.0833 26.25L49.5833 43.75" stroke="#3F1414" stroke-width="5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M49.5833 26.25L67.0833 43.75" stroke="#3F1414" stroke-width="5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="centered containerSlim navBtnContainer">
+            <a href="#events"><button>Events & Termine</button></a>
+            <a href="#gallery"><button>Bilder & Videos</button></a>
+            <a href="#contact"><button>Kontaktformular</button></a>
+        </div>
+
+        <!-- Intro-Text -->
+        <div class="centered containerFull">
+            <div class="centered headingBox">
+                <h1>Wir sind Soundouts!</h1>
+            </div>
+            <div class="centered containerSlim textBox">
+                <p>Leidenschaftliche Straßenmusiker mit dem gewissen Etwas! Unsere einzigartige Mischung aus Jazz, Blues
+                    und
+                    modernen Evergreens verwandelt jeden Ort in eine kleine Konzerthalle. Egal ob auf dem Marktplatz,
+                    vor
+                    dem Café oder bei eurer privaten Feier – wir sorgen für die perfekte musikalische Untermalung und
+                    eine
+                    Atmosphäre zum Wohlfühlen.</p>
+                <br>
+                <p>Was uns antreibt? Die pure Freude an der Musik und die strahlenden Gesichter unserer Zuhörer. Mit
+                    viel
+                    Herzblut, einer ordentlichen Portion Improvisation und unserem unverwechselbaren Sound bringen wir
+                    Leben
+                    in die Stadt. Von sanften Balladen bis hin zu mitreißenden Rhythmen – unser Repertoire ist so
+                    vielfältig
+                    wie unser Publikum.</p>
+                <br>
+                <p>Ursprünglich in den Gassen von Passau geboren, sind wir heute nicht nur auf den Straßen, sondern auch
+                    für
+                    private Events, Firmenveranstaltungen und besondere Anlässe buchbar. Authentisch, spontan und immer
+                    mit
+                    dem richtigen Gespür für den Moment – so sind die Soundouts! Bereit für euren Soundtrack? Wir freuen
+                    uns
+                    auf euch!</p>
+                <br>
+                <h5>Folg uns auch auf den Socials!</h5>
+                <br>
+                <div class="socialContainer">
+                    <svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        viewBox="0 0 50 50" fill="none">
+                        <path
+                            d="M35.4167 4.16663H14.5834C8.83039 4.16663 4.16669 8.83033 4.16669 14.5833V35.4166C4.16669 41.1696 8.83039 45.8333 14.5834 45.8333H35.4167C41.1697 45.8333 45.8334 41.1696 45.8334 35.4166V14.5833C45.8334 8.83033 41.1697 4.16663 35.4167 4.16663Z"
+                            stroke="#FB8B24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M33.3333 23.6875C33.5904 25.4214 33.2943 27.1921 32.487 28.748C31.6797 30.3038 30.4024 31.5655 28.8367 32.3535C27.271 33.1415 25.4967 33.4158 23.7662 33.1374C22.0357 32.8589 20.437 32.0419 19.1976 30.8024C17.9581 29.563 17.1411 27.9643 16.8626 26.2338C16.5842 24.5033 16.8584 22.729 17.6465 21.1633C18.4345 19.5976 19.6962 18.3203 21.252 17.513C22.8079 16.7057 24.5786 16.4096 26.3125 16.6667C28.0811 16.9289 29.7184 17.7531 30.9827 19.0173C32.2469 20.2816 33.0711 21.9189 33.3333 23.6875Z"
+                            stroke="#FB8B24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M36.4583 13.5416H36.4791" stroke="#FB8B24" stroke-width="5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        viewBox="0 0 50 50" fill="none">
+                        <g clip-path="url(#clip0_104_74)">
+                            <path
+                                d="M46.9583 13.375C46.7109 12.3863 46.2069 11.4804 45.4972 10.7488C44.7876 10.0172 43.8974 9.48584 42.9167 9.20837C39.3333 8.33337 25 8.33337 25 8.33337C25 8.33337 10.6667 8.33337 7.08334 9.29171C6.10261 9.56918 5.21246 10.1005 4.50282 10.8321C3.79317 11.5637 3.28915 12.4696 3.04168 13.4584C2.38587 17.0949 2.06509 20.784 2.08334 24.4792C2.05997 28.2022 2.38078 31.9194 3.04168 35.5834C3.31451 36.5414 3.82982 37.4128 4.53781 38.1135C5.24581 38.8142 6.12255 39.3205 7.08334 39.5834C10.6667 40.5417 25 40.5417 25 40.5417C25 40.5417 39.3333 40.5417 42.9167 39.5834C43.8974 39.3059 44.7876 38.7745 45.4972 38.0429C46.2069 37.3114 46.7109 36.4054 46.9583 35.4167C47.6091 31.8075 47.9299 28.1466 47.9167 24.4792C47.9401 20.7562 47.6192 17.039 46.9583 13.375Z"
+                                stroke="#FB8B24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.3125 31.2916L32.2917 24.4791L20.3125 17.6666V31.2916Z" stroke="#FB8B24"
+                                stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_104_74">
+                                <rect width="50" height="50" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meet the Band -->
+        <div class="centered containerFull">
+            <div class="centered headingBox">
+                <h1>Meet the Band!</h1>
+            </div>
+            <div class="centered containerSlim bandMemberContainer">
+                <div class="centered bandMemberCard">
+                    <div class="imgCard bandMemberImg">
+                        <img src="img-vid/band-members/andi.png" alt="Andi">
+                    </div>
+                    <br>
+                    <h5>Andi</h5>
+                    <p>Gitarre & Gesang. Nenn ihn Garfunkel!</p>
+                </div>
+                <div class="centered bandMemberCard">
+                    <div class="imgCard bandMemberImg">
+                        <img src="img-vid/band-members/phil.png" alt="Phil">
+                    </div>
+                    <br>
+                    <h5>Phil</h5>
+                    <p>Gitarre & Gesang. Nenn ihn Simon!</p>
+                </div>
+                <div class="centered bandMemberCard">
+                    <div class="imgCard bandMemberImg">
+                        <img src="img-vid/band-members/basti.png" alt="Basti">
+                    </div>
+                    <br>
+                    <h5>Basti</h5>
+                    <p>Gesang. Mit Power in der Stimme!</p>
+                </div>
+                <div class="centered bandMemberCard">
+                    <div class="imgCard bandMemberImg">
+                        <img src="img-vid/band-members/alejandro.png" alt="Danyal">
+                    </div>
+                    <br>
+                    <h5>Danyal</h5>
+                    <p>Gitarre & Gesang. Immer mit viel Soul!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events & Termine -->
+      <div class="centered containerFull" id="events">
+            <div class="centered headingBox">
+                <h1>Events & Termine</h1>
+            </div>
+            <div class="centered containerSlim textBox">
+                <div class="eventCard">
+                    <div class="eventCardElement">
+                        <div class="eventDate">
+                            <h3>Montag<br>08.09.25</h3>
+                        </div>
+                        <div class="eventName">
+                            <h4>Straßenmusik in der Passauer Altstadt</h4>
+                        </div>
+                    </div>
+                    <div class="eventCardElement">
+                        <div class="eventTime">
+                            <h4>14:00 - 16:00</h4>
+                        </div>
+                        <button class="expandButton"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                viewBox="0 0 50 50" fill="none">
+                                <path d="M12.5 18.75L25 31.25L37.5 18.75" stroke="#3F1414" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="spacer-48"></div>
+                <div class="eventCard">
+                    <div class="eventCardElement">
+                        <div class="eventDate">
+                            <h3>Samstag<br>13.09.25</h3>
+                        </div>
+                        <div class="eventName">
+                            <h4>Livemusik im Cafe Museum</h4>
+                        </div>
+                    </div>
+                    <div class="eventCardElement">
+                        <div class="eventTime">
+                            <h4>ab 19:00</h4>
+                        </div>
+                        <button class="expandButton"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                viewBox="0 0 50 50" fill="none">
+                                <path d="M12.5 18.75L25 31.25L37.5 18.75" stroke="#3F1414" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="spacer-48"></div>
+                <div class="eventCard">
+                    <div class="eventCardElement">
+                        <div class="eventDate">
+                            <h3>Mittwoch<br>15.10.25</h3>
+                        </div>
+                        <div class="eventName">
+                            <h4>Straßenmusik in der Passauer Altstadt</h4>
+                        </div>
+                    </div>
+                    <div class="eventCardElement">
+                        <div class="eventTime">
+                            <h4>14:00 - 16:00</h4>
+                        </div>
+                        <button class="expandButton"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                viewBox="0 0 50 50" fill="none">
+                                <path d="M12.5 18.75L25 31.25L37.5 18.75" stroke="#3F1414" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="spacer-48"></div>
+                <div class="eventCard">
+                    <div class="eventCardElement">
+                        <div class="eventDate">
+                            <h3>Freitag<br>14.11.25</h3>
+                        </div>
+                        <div class="eventName">
+                            <h4>Straßenfest Passauer Innstadt</h4>
+                        </div>
+                    </div>
+                    <div class="eventCardElement">
+                        <div class="eventTime">
+                            <h4>ab 15:00</h4>
+                        </div>
+                        <button class="expandButton"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                viewBox="0 0 50 50" fill="none">
+                                <path d="M12.5 18.75L25 31.25L37.5 18.75" stroke="#3F1414" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bilder & Videos -->
+        <div class="centered containerFull" id="gallery">
+            <div class="centered headingBox">
+                <h1>Bilder & Videos</h1>
+            </div>
+            <div class="centered containerSlim containerGallery">
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_194752.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_201353.jpg" alt="Gallery Image 2">
+                </div>
+                <!-- IMG Example -->
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_201439.jpg" alt="Gallery Image 3">
+                </div>
+                <!-- Video Example -->
+                <div class="imgCard videoThumbnail" data-video="img-vid/gallery/Video_Platzhalter.mp4">
+                    <img src="img-vid/gallery/IMG-20250620-WA0010.jpg" alt="Performance Video">
+                    <button class="play-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" fill="none">
+                            <path d="M18 12L38 25L18 38V12Z" fill="#3F1414" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/IMG-20250620-WA0010.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_194752.jpg" alt="Gallery Image 6">
+                </div>
+                <div class="imgCard videoThumbnail" data-video="img-vid/gallery/Video_Platzhalter.mp4">
+                    <img src="img-vid/gallery/20250513_194752.jpg" alt="Performance Video">
+                    <button class="play-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" fill="none">
+                            <path d="M18 12L38 25L18 38V12Z" fill="#3F1414" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_201439.jpg" alt="Gallery Image 8">
+                </div>
+            </div>
+            <div id="hidden-gallery" class="centered containerSlim containerGallery hiddenGallery">
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_194752.jpg" alt="Gallery Image 9">
+                </div>
+                <div class="imgCard videoThumbnail" data-video="img-vid/gallery/Video_Platzhalter.mp4">
+                    <img src="img-vid/gallery/IMG-20250620-WA0010.jpg" alt="Performance Video">
+                    <button class="play-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" fill="none">
+                            <path d="M18 12L38 25L18 38V12Z" fill="#3F1414" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_201439.jpg" alt="Gallery Image 11">
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/IMG-20250521-WA0016.jpg" alt="Gallery Image 12">
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/IMG-20250620-WA0010.jpg" alt="Gallery Image 13">
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_194752.jpg" alt="Gallery Image 14">
+                </div>
+                <div class="imgCard imgThumbnail">
+                    <img src="img-vid/gallery/20250513_201353.jpg" alt="Gallery Image 15">
+                </div>
+            </div>
+            <button id="hidden-gallery-btn">Mehr anzeigen</button>
+        </div>
+
+        <!-- Gallery Overlay -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-btn lightbox-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <path d="M15 15L35 35" stroke="#3F1414" stroke-width="5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M35 15L15 35" stroke="#3F1414" stroke-width="5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></span>
+            <span class="lightbox-btn lightbox-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <path d="M12.5 18.75L25 31.25L37.5 18.75" stroke="#3F1414" stroke-width="5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></span>
+            <span class="lightbox-btn lightbox-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <path d="M12.5 18.75L25 31.25L37.5 18.75" stroke="#3F1414" stroke-width="5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></span>
+            <img class="lightbox-content lightbox-image" id="lightbox-img">
+            <video class="lightbox-content lightbox-video" id="lightbox-video" controls>
+                <source id="lightbox-video-source" type="video/mp4">
+            </video>
+            <!-- <div class="lightbox-caption"></div> -->
+        </div>
+
+        <!-- Kontaktformular -->
+        <div class="centered containerFull" id="contact">
+            <div class="centered headingBox">
+                <h1>Schreib uns!</h1>
+            </div>
+            <div class="centered containerSlim">
+                <form class="contactForm">
+                    <div class="formRow">
+                        <div class="formField">
+                            <label for="vorname">
+                                <h5>Vorname:</h5>
+                            </label>
+                            <input type="text" id="vorname" name="vorname" required>
+                        </div>
+                        <div class="formField">
+                            <label for="nachname">
+                                <h5>Nachname:</h5>
+                            </label>
+                            <input type="text" id="nachname" name="nachname" required>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formField">
+                            <label for="email">
+                                <h5>E-Mail:</h5>
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="formField">
+                            <label for="telefon">
+                                <h5>Telefon:</h5>
+                            </label>
+                            <input type="tel" id="telefon" name="telefon">
+                        </div>
+                    </div>
+                    <div class="formField">
+                        <label for="nachricht">
+                            <h5>Nachricht:</h5>
+                        </label>
+                        <textarea id="nachricht" name="nachricht" required spellcheck="false"></textarea>
+                    </div>
+                    <button type="submit">Senden</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="centered footerContent">
+            <div class="footerLeft">
+                <div class="socialContainer">
+                    <svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        viewBox="0 0 50 50" fill="none">
+                        <path
+                            d="M35.4167 4.16663H14.5834C8.83039 4.16663 4.16669 8.83033 4.16669 14.5833V35.4166C4.16669 41.1696 8.83039 45.8333 14.5834 45.8333H35.4167C41.1697 45.8333 45.8334 41.1696 45.8334 35.4166V14.5833C45.8334 8.83033 41.1697 4.16663 35.4167 4.16663Z"
+                            stroke="#FB8B24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M33.3333 23.6875C33.5904 25.4214 33.2943 27.1921 32.487 28.748C31.6797 30.3038 30.4024 31.5655 28.8367 32.3535C27.271 33.1415 25.4967 33.4158 23.7662 33.1374C22.0357 32.8589 20.437 32.0419 19.1976 30.8024C17.9581 29.563 17.1411 27.9643 16.8626 26.2338C16.5842 24.5033 16.8584 22.729 17.6465 21.1633C18.4345 19.5976 19.6962 18.3203 21.252 17.513C22.8079 16.7057 24.5786 16.4096 26.3125 16.6667C28.0811 16.9289 29.7184 17.7531 30.9827 19.0173C32.2469 20.2816 33.0711 21.9189 33.3333 23.6875Z"
+                            stroke="#FB8B24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M36.4583 13.5416H36.4791" stroke="#FB8B24" stroke-width="5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                        viewBox="0 0 50 50" fill="none">
+                        <g clip-path="url(#clip0_104_74)">
+                            <path
+                                d="M46.9583 13.375C46.7109 12.3863 46.2069 11.4804 45.4972 10.7488C44.7876 10.0172 43.8974 9.48584 42.9167 9.20837C39.3333 8.33337 25 8.33337 25 8.33337C25 8.33337 10.6667 8.33337 7.08334 9.29171C6.10261 9.56918 5.21246 10.1005 4.50282 10.8321C3.79317 11.5637 3.28915 12.4696 3.04168 13.4584C2.38587 17.0949 2.06509 20.784 2.08334 24.4792C2.05997 28.2022 2.38078 31.9194 3.04168 35.5834C3.31451 36.5414 3.82982 37.4128 4.53781 38.1135C5.24581 38.8142 6.12255 39.3205 7.08334 39.5834C10.6667 40.5417 25 40.5417 25 40.5417C25 40.5417 39.3333 40.5417 42.9167 39.5834C43.8974 39.3059 44.7876 38.7745 45.4972 38.0429C46.2069 37.3114 46.7109 36.4054 46.9583 35.4167C47.6091 31.8075 47.9299 28.1466 47.9167 24.4792C47.9401 20.7562 47.6192 17.039 46.9583 13.375Z"
+                                stroke="#FB8B24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.3125 31.2916L32.2917 24.4791L20.3125 17.6666V31.2916Z" stroke="#FB8B24"
+                                stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_104_74">
+                                <rect width="50" height="50" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <a href="#">
+                    <h5>soundoutsmusic@gmail.com</h5>
+                </a>
+            </div>
+            <div class="footerRight">
+                <a href="#">
+                    <h5>Impressum</h5>
+                </a>
+                <a href="#">
+                    <h5>Datenschutz</h5>
+                </a>
+                <h5>©2025 Soundouts. Alle Rechte vorbehalten</h5>
+                <a style="color: darkgrey">This Website is a work in progress!</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+
+</html>

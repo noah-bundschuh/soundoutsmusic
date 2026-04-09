@@ -1,0 +1,109 @@
+/*___________________________________________________________________________*/
+/* Tablet */
+@media (max-width: 1100px) {
+
+    /* Hero Section */
+    .hero-video-container {
+        margin-top: -50px;
+    }
+
+    /* Navigation Buttons */
+    .navBtnContainer a button {
+        padding: var(--spacing-10) var(--spacing-16);
+    }
+
+    /* Hilfsklassen */
+    .containerFull {
+        max-width: 1024px;
+        margin-top: var(--spacing-96);
+    }
+
+    .containerSlim {
+        max-width: 960px;
+        margin-top: var(--spacing-48);
+    }
+
+    /* Meet the Band */
+    .bandMemberContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        row-gap: var(--spacing-48);
+        height: auto;
+    }
+
+    .bandMemberCard br {
+        display: none;
+    }
+
+    .bandMemberCard h5 {
+        margin-top: var(--spacing-16);
+    }
+
+    /* Gallery Overlay */
+    .lightbox-content {
+        max-width: 85vw;
+        max-height: 80vh;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 30px;
+        font-size: 45px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 45px;
+        padding: 15px;
+    }
+
+    .lightbox-prev {
+        left: 20px;
+    }
+
+    .lightbox-next {
+        right: 20px;
+    }
+
+    .lightbox-caption {
+        bottom: 20px;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        top: auto;
+        bottom: 80px;
+        transform: none;
+        font-size: 40px;
+    }
+
+    .lightbox-prev {
+        left: 20%;
+    }
+
+    .lightbox-next {
+        right: 20%;
+        left: auto;
+    }
+}
+
+
+
+
+
+/*___________________________________________________________________________*/
+/* Mobile */
+@media (max-width: 768px) {
+    
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Small Mobile */
+@media (max-width: 480px) {
+    
+}

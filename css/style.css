@@ -1,0 +1,504 @@
+/*___________________________________________________________________________*/
+/* Variables */
+:root {
+    /* Colors */
+    --color-Main: #004126;
+    --color-Text: #FDF7E1;
+    --color-Secondary: #3F1414;
+    --color-Accent: #FB8B24;
+
+    /* Typography */
+    --font-primary: 'Chocoladine', serif;
+    --font-secondary: 'Courier New', serif;
+    --font-body: 'Lucida Sans', sans-serif;
+    --font-size-16: 1rem;
+    --font-size-18: 1.125rem;
+    --font-size-20: 1.25rem;
+    --font-size-24: 1.5rem;
+    --font-size-30: 1.875rem;
+    --font-size-32: 2rem;
+    --font-size-36: 2.25rem;
+    --font-size-96: 6rem;
+
+    /* Spacing */
+    --spacing-4: 0.25rem;
+    --spacing-8: 0.5rem;
+    --spacing-10: 0.625rem;
+    --spacing-16: 1rem;
+    --spacing-24: 1.5rem;
+    --spacing-32: 2rem;
+    --spacing-48: 3rem;
+    --spacing-64: 4rem;
+    --spacing-80: 5rem;
+    --spacing-96: 6rem;
+    --spacing-120: 7.5rem;
+
+    /* Border Radius */
+    --border-radius-30: 1.875rem;
+    --border-radius-50: 3.125rem;
+
+    /* Transformations */
+    --transform-scale-small: scale(1.025);
+    --transform-scale-medium: scale(1.1);
+
+    /* Transitions */
+    --transition-normal: 200ms ease;
+
+    /* Box Shadows */
+    --shadow-header: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-footer: 0 -10px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-logo: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-heading: 4px 4px 2px rgba(0, 0, 0, 0.25);
+    --shadow-neumorphic-inset: inset 10px 10px 20px #003620,
+        inset -10px -10px 20px rgba(0, 77, 45, 0.75);
+    --shadow-cartoon-right: 0 0 15px 10px rgba(0, 0, 0, 0.1),
+        4px 4px 0 0 var(--color-Accent);
+    --shadow-cartoon-left: 0 0 15px 10px rgba(0, 0, 0, 0.1),
+        -4px 4px 0 0 var(--color-Accent);
+    --shadow-cartoon-left-hover: 0 0 15px 10px rgba(0, 0, 0, 0.1),
+        -8px 8px 0 0 var(--color-Accent);
+    --shadow-button: 0 0 15px 10px rgba(0, 0, 0, 0.10), 4px 4px 0 0 var(--color-Secondary);
+    --shadow-button-hover: 0 0 15px 10px rgba(0, 0, 0, 0.10), 4px 4px 0 0 var(--color-Text);
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Reset und Basis-Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-20);
+    color: var(--color-Text);
+    background-color: var(--color-Main);
+    line-height: 1.5;
+}
+
+main {
+    padding: var(--spacing-32);
+}
+
+a {
+    color: var(--color-Text);
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+path {
+    transition: var(--transition-normal);
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Headings */
+h1 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-96);
+    color: var(--color-Accent);
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-Secondary); */
+    text-shadow: var(--shadow-heading);
+    line-height: normal;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-36);
+}
+
+h4 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-32);
+    font-weight: 500;
+}
+
+h5 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-24);
+    color: var(--color-Text);
+    transition: var(--transition-normal);
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Basic Elements */
+
+/* Header */
+header {
+    position: fixed;
+    transform: translateY(-100%);
+    z-index: 1001;
+    width: 100%;
+    padding: var(--spacing-16) var(--spacing-32) var(--spacing-16) var(--spacing-32);
+    background-color: var(--color-Main);
+    transition: var(--transition-normal);
+}
+
+header.visible {
+    transform: translateY(0);
+    box-shadow: var(--shadow-header);
+}
+
+.headerContent {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.headerContent img {
+    width: 300px;
+}
+
+.headerNavBtnContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-24);
+}
+
+.headerNavBtnContainer button {
+    padding: 10px 20px 10px 20px;
+    font-size: var(--font-size-18);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: var(--spacing-96);
+    padding: var(--spacing-24) var(--spacing-32) var(--spacing-16) var(--spacing-32);
+    background-color: var(--color-Main);
+    box-shadow: var(--shadow-footer);
+}
+
+.footerContent {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerLeft .socialContainer {
+    justify-content: left;
+    margin-bottom: var(--spacing-16);
+}
+
+.footerRight {
+    text-align: right;
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Unique Elements */
+
+/* Logo */
+.logoContainer {
+    overflow: hidden;
+    max-width: 1000px;
+    z-index: 1000;
+}
+
+/* Hero-Section */
+.hero-video-container {
+    overflow: hidden;
+    max-width: 1240px;
+    border-radius: var(--border-radius-50);
+    box-shadow: var(--shadow-cartoon-right);
+    margin-top: -70px;
+    z-index: 500;
+}
+
+#muteBtn {
+    position: absolute;
+    bottom: var(--spacing-32);
+    right: var(--spacing-32);
+}
+
+/* Navigation Buttons */
+.navBtnContainer {
+    margin-top: var(--spacing-80);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-16);
+}
+
+#events,
+#gallery,
+#contact {
+    scroll-margin-top: var(--spacing-64);
+}
+
+/* Intro-Text */
+.socialContainer {
+    display: flex;
+    gap: var(--spacing-48);
+    justify-content: center;
+}
+
+.socialIcon {
+    transition: var(--transition-normal);
+}
+
+.socialIcon:hover {
+    transform: var(--transform-scale-medium);
+    cursor: pointer;
+}
+
+/* Meet the Band */
+.bandMemberContainer {
+    display: flex;
+    flex-direction: row;
+    height: 456px;
+}
+
+.bandMemberCard {
+    max-width: 240px;
+    text-align: left;
+    transition: var(--transition-normal);
+}
+
+.bandMemberCard:hover {
+    transform: var(--transform-scale-medium);
+}
+
+.bandMemberCard:hover h5 {
+    font-size: var(--font-size-36);
+    text-shadow: var(--shadow-heading);
+}
+
+.bandMemberCard:hover .imgCard {
+    box-shadow: var(--shadow-cartoon-left-hover);
+}
+
+.bandMemberImg {
+    height: 300px;
+}
+
+/* Events & Termine */
+.eventCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.eventCardElement {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.eventName {
+    align-content: center;
+}
+
+.eventTime {
+    width: 250px;
+    align-content: center;
+}
+
+/* Bilder & Videos */
+.containerGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-48);
+    margin-bottom: var(--spacing-48);
+    justify-items: center;
+}
+
+.imgThumbnail {
+    width: 240px;
+    height: 200px;
+}
+
+.imgThumbnail:hover {
+    transform: var(--transform-scale-small);
+}
+
+/* Hidden Gallery */
+.hiddenGallery {
+    display: none;
+}
+
+/* Thumbnail Hover */
+.imgThumbnail img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgThumbnail img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery Overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--border-radius-50);
+    object-fit: contain;
+    box-shadow: var(--shadow-cartoon-right);
+}
+
+@keyframes zoom {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.videoThumbnail {
+    width: 240px;
+    height: 200px;
+}
+
+.videoThumbnail:hover {
+    transform: var(--transform-scale-small);
+}
+
+.play-icon {
+    position: absolute;
+    bottom: var(--spacing-8);
+    left: var(--spacing-8);
+    padding: 6px;
+    padding-bottom: 0px;
+}
+
+.play-icon:hover path {
+    stroke: var(--color-Text);
+    fill: var(--color-Text);
+}
+
+/* Lightbox Video */
+.lightbox-video {
+    display: none;
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: var(--border-radius-30);
+}
+
+.lightbox-image {
+    display: none;
+}
+
+/* Wenn Video aktiv */
+.lightbox-video.active {
+    display: block;
+}
+
+.lightbox-image.active {
+    display: block;
+}
+
+/* Caption */
+/* .lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 10000;
+} */
+
+/* Kontaktformular */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+}
+
+.formRow {
+    display: flex;
+    gap: var(--spacing-48);
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--spacing-8);
+}
+
+.formField label {
+    text-align: left;
+    margin-left: var(--spacing-16);
+}
+
+.formField input,
+.formField textarea {
+    padding: var(--spacing-16) var(--spacing-24) var(--spacing-16) var(--spacing-24);
+    border: none;
+    border-radius: var(--border-radius-30);
+    background-color: var(--color-Main);
+    color: var(--color-Text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-20);
+    box-shadow: var(--shadow-neumorphic-inset);
+}
+
+.formField input:focus,
+.formField textarea:focus {
+    outline: 1px solid var(--color-Accent);
+}
+
+.formField textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.contactForm button {
+    align-self: center;
+}

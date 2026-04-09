@@ -1,0 +1,169 @@
+/*___________________________________________________________________________*/
+/* Buttons */
+button {
+    padding: 15px 70px 15px 70px;
+    border-radius: var(--border-radius-30);
+    border: none;
+    background-color: var(--color-Accent);
+    box-shadow: var();
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-20);
+    font-weight: bold;
+    color: var(--color-Secondary);
+    box-shadow: var(--shadow-button);
+    transition: var(--transition-normal);
+}
+
+button:hover {
+    transform: var(--transform-scale-small);
+    color: var(--color-Text);
+    box-shadow: var(--shadow-button-hover);
+    cursor: pointer;
+    text-shadow: 1px 1px 2px var(--color-Secondary);
+}
+
+.mute-btn {
+    padding: var(--spacing-16);
+    padding-bottom: var(--spacing-10);
+}
+
+.mute-btn:hover path {
+    stroke: var(--color-Text);
+}
+
+.expandButton {
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    border-radius: var(--border-radius-50);
+}
+
+.expandButton:hover path {
+    stroke: var(--color-Text);
+}
+
+/* Gallery Overlay Buttons */
+.lightbox-btn {
+    padding: 15px 70px 15px 70px;
+    border-radius: var(--border-radius-30);
+    border: none;
+    background-color: var(--color-Accent);
+    box-shadow: var();
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-20);
+    font-weight: bold;
+    color: var(--color-Secondary);
+    box-shadow: var(--shadow-button);
+    transition: var(--transition-normal);
+
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    border-radius: var(--border-radius-50);
+}
+
+.lightbox-btn:hover {
+    transform: var(--transform-scale-small);
+    color: var(--color-Text);
+    box-shadow: var(--shadow-button-hover);
+    cursor: pointer;
+    text-shadow: 1px 1px 2px var(--color-Secondary);
+}
+
+.lightbox-btn:hover path {
+    stroke: var(--color-Text);
+}
+
+/* Gallery Ovleray Close Button */
+.lightbox-btn {
+    position: absolute;
+    top: var(--spacing-32);
+    right: var(--spacing-32);
+}
+
+/* Gallery Ovleray Navigation Pfeile */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10000;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: var(--accent-orange);
+}
+
+.lightbox-prev {
+    left: var(--spacing-32);
+}
+
+.lightbox-next {
+    right: var(--spacing-32);
+}
+
+.lightbox-prev svg {
+    transform: rotate(90deg);
+    transform-origin: center center;
+}
+
+.lightbox-next svg {
+    transform: rotate(-90deg);
+    transform-origin: center center;
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Spacers */
+.spacer-48 {
+    height: var(--spacing-48);
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Hilfsklassen */
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.containerFull {
+    max-width: 1240px;
+    margin-top: var(--spacing-120);
+}
+
+.containerSlim {
+    max-width: 1140px;
+    margin-top: var(--spacing-48);
+}
+
+
+
+/*___________________________________________________________________________*/
+/* Recurring Elements */
+.headingBox {
+    border-radius: var(--border-radius-50);
+    background-color: var(--color-Main);
+    box-shadow: var(--shadow-cartoon-right);
+    height: var(--font-size-96);
+}
+
+.textBox {
+    padding: 40px;
+    border-radius: var(--border-radius-50);
+    box-shadow: var(--shadow-neumorphic-inset);
+}
+
+.imgCard {
+    overflow: hidden;
+    border-radius: var(--border-radius-30);
+    box-shadow: var(--shadow-cartoon-left);
+    transition: var(--transition-normal);
+}
+
+.imgCard:hover {
+    box-shadow: var(--shadow-cartoon-left-hover);
+}
