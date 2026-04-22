@@ -1,4 +1,20 @@
 /*___________________________________________________________________________*/
+/* Fonts */
+@font-face {
+    font-family: 'Chocoladine';
+    src: url('../fonts/ChocoladineDemo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lucida Sans';
+    src: url('../fonts/LSANS.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Courier New';
+    src: url('../fonts/couriernew.ttf') format('truetype');
+}
+
 /* Variables */
 :root {
     /* Colors */
