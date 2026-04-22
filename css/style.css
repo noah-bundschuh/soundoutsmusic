@@ -12,7 +12,8 @@
 
 @font-face {
     font-family: 'CourierCustom';
-    src: url('../fonts/Courier New.ttf') format('truetype');
+    src: url('../fonts/courbd.ttf') format('truetype');
+    -webkit-text-stroke: 0.5px currentColor;
 }
 
 /* Variables */
